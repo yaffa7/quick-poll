@@ -1,0 +1,74 @@
+.card {
+  font-family: 'Quicksand', sans-serif;
+  background: white;
+  padding: 15px;
+  height: auto;
+  width: 300px;
+  border-radius: 18px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.card h2 {
+  text-align: center;
+  color: #3c3d45;
+  font-size: 1.25em;
+  margin: 40px 20px 40px 20px;
+}
+img.avatar {
+  width: 75px;
+  border-radius: 5em;
+  position: relative;
+  left: 70px;
+}
+
+.progress {
+  border: 3px solid #efefef;
+  border-radius: 6em;
+  height: 50px;
+  color: white;
+  margin-bottom: 5px;
+  overflow: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.progress.winner{
+  border: 3px solid #efefef;
+  border-radius: 6em;
+  height: 50px;
+  color: #67d098;
+  margin-bottom: 5px;
+  overflow: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.progress .answer {
+  color: #505776;
+  font-size: 1em;
+  font-weight: bold;
+  float: left;
+  margin-top: 16px;
+}
+
+.progress .votes {
+  float: right;
+  color:grey;
+  font-size: .85em;
+  margin-top: 16px;
+}
+
+.header {
+  color: #dad9e1;
+  font-weight: bold
+}
+
+.header .votes {
+  font-weight: bold;
+  float: left
+}
+
+.header .logo {
+  float: right
+}
