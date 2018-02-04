@@ -1,65 +1,63 @@
 import React, { Component } from 'react'
 import './card.css'
 
-class Card extends Component{
-    constructor(data) {
-        super(data)
-        this.state = data
-        console.log(this.state)
-    }
+class Card extends Component {
+  constructor(data) {
+    super(data)
+    this.state = data
+    console.log(this.state)
+  }
 
-    totalVotes() {
-        let sum = 0
-        this.state.data.options.forEach(op => {
-            sum+=op.value
-        })
-        return sum
-    }
+  totalVotes() {
+    let sum = 0
+    this.state.data.options.forEach(op => {
+      sum += op.value
+    })
+    return sum
+  }
 
-    winner() {
-        let max = { value: 0}
-        this.state.data.options.forEach(op => {
-            if (op.value > max.value) {
-                max = op
-            }
-        })
+  winner() {
+    let max = { value: 0 }
+    this.state.data.options.forEach(op => {
+      if (op.value > max.value) {
+        max = op
+      }
+    })
 
-        return max.text
-    }
+    return max.text
+  }
 
-    handleVote(answer) {
-        let currState = this.state
-        currState.data.options.forEach(op => {
-            if (op.text === answer) {
-                op.value++
-            }
-        })
-        this.setState({data : currState.data})
-    }
+  handleVote(answer) {
+    let currState = this.state
+    currState.data.options.forEach(op => {
+      if (op.text === answer) {
+        op.value++
+      }
+    })
+    this.setState({ data: currState.data })
+  }
 
-    render(){
-        return (
-            <div>
-                <div className="card">
+  render() {
+    return (
+      <div>
+        <div className="card">
           <div className="header">
-          <span className="votes">{this.totalVotes()}</span>
-          <img src={this.state.data.avatar_url} alt="" className="avatar"/>
-          <span className="logo">Quick Poll</span>
+            <span className="votes">{this.totalVotes()}</span>
+            <img src={this.state.data.avatar_url} alt="" className="avatar" />
+            <span className="logo">Quick Poll</span>
           </div>
           <h2>{this.state.data.question}</h2>
-          {this.state.data.options.map(option => 
+          {this.state.data.options.map(option =>
             <div onClick={() => this.handleVote(option.text)} className={this.winner() === option.text ? 'progress winner' : 'progress'} key={option.text}>
               <span className="answer">{option.text}</span>
               <span className="votes">{option.value}</span>
-            </div>         
-            )}
-        </div>
             </div>
-        )
+          )}
+        </div>
+      </div>
+    )
 
-    }
-
-
+  }
 }
 
 export default Card
