@@ -8,7 +8,7 @@
     overflow: hidden;
     margin: 0 auto 20px auto;
   }
-  
+
   .card h2 {
     text-align: center;
     color: #3c3d45;
@@ -31,17 +31,19 @@
     overflow: auto;
     padding-left: 20px;
     padding-right: 20px;
+    cursor: pointer;
   }
   
   .progress.winner {
     border: 3px solid #efefef;
     border-radius: 6em;
     height: 50px;
-    color: #67d098;
+    background-color: #67d098;
     margin-bottom: 5px;
     overflow: auto;
     padding-left: 20px;
     padding-right: 20px;
+    cursor: pointer;
   }
   
   .progress .answer {

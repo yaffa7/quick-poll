@@ -62,7 +62,7 @@ class App extends Component {
 function CardList({ props }) {
   return (
     props.map(card =>
-      <Card data={card} />
+      <Card data={card} key={card.question}/>
     )
   )
 }

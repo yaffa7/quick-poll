@@ -2,13 +2,18 @@ import React, { Component } from 'react'
 import './card.css'
 
 class Card extends Component{
-    constructor(props) {
-        super(props)
-        this.state = props
+    constructor(data) {
+        super(data)
+        this.state = data
+        console.log(this.state)
     }
 
     totalVotes() {
-
+        let sum = 0
+        this.state.data.options.forEach(op => {
+            sum+=op.value
+        })
+        return sum
     }
 
     winner() {
@@ -18,11 +23,18 @@ class Card extends Component{
                 max = op
             }
         })
+
         return max.text
     }
 
-    handleVote() {
-
+    handleVote(answer) {
+        let currState = this.state
+        currState.data.options.forEach(op => {
+            if (op.text === answer) {
+                op.value++
+            }
+        })
+        this.setState({data : currState.data})
     }
 
     render(){
@@ -32,11 +44,11 @@ class Card extends Component{
           <div className="header">
           <span className="votes">{this.totalVotes()}</span>
           <img src={this.state.data.avatar_url} alt="" className="avatar"/>
-          <span className="logo">HQ</span>
+          <span className="logo">Quick Poll</span>
           </div>
           <h2>{this.state.data.question}</h2>
           {this.state.data.options.map(option => 
-            <div className={this.winner() === option.text ? 'progress' : 'progress winner'}>
+            <div onClick={() => this.handleVote(option.text)} className={this.winner() === option.text ? 'progress winner' : 'progress'} key={option.text}>
               <span className="answer">{option.text}</span>
               <span className="votes">{option.value}</span>
             </div>         
