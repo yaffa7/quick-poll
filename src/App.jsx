@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Card from './components/card'
+import ResultsCard from './components/results-card'
 
 class App extends Component {
   constructor() {
@@ -62,7 +62,7 @@ class App extends Component {
 function CardList({ props }) {
   return (
     props.map(card =>
-      <Card data={card} key={card.question}/>
+      <ResultsCard data={card} key={card.question}/>
     )
   )
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import './card.css'
+import './results-card.css'
 
-class Card extends Component {
+class ResultsCard extends Component {
   constructor(data) {
     super(data)
     this.state = data
@@ -60,4 +60,4 @@ class Card extends Component {
   }
 }
 
-export default Card
+export default ResultsCard
