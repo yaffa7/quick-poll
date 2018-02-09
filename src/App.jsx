@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import ResultsCard from './components/results-card'
+import CreateCard from './components/create-card'
 
 class App extends Component {
   constructor() {
@@ -53,6 +54,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <CreateCard/>
         <CardList props= {this.state.data}/>
       </div>
     )
@@ -61,9 +63,13 @@ class App extends Component {
 
 function CardList({ props }) {
   return (
-    props.map(card =>
+    <div>
+    {props.map(card =>
+    <div>
       <ResultsCard data={card} key={card.question}/>
-    )
+      </div>
+    )}
+    </div>
   )
 }
 

@@ -1,0 +1,29 @@
+.card-create {
+    font-family: 'Quicksand', sans-serif;
+    background: white;
+    padding: 15px;
+    height: auto;
+    width: 300px;
+    border-radius: 18px;
+    overflow: hidden;
+    margin: 0 auto 20px auto;
+  }
+
+  .card-create h2 {
+    text-align: center;
+    color: #3c3d45;
+    font-size: 1.25em;
+    margin: 40px 20px;
+  }
+
+.card-create input {
+  border: 2px solid #efefef;
+  border-radius: 6em;
+  height: 20px;
+  color: black;
+  width: auto;
+  margin: 5px auto 5px auto;
+  overflow: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
