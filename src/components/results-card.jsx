@@ -43,7 +43,7 @@ class ResultsCard extends Component {
         <div className="card">
           <div className="header">
             <span className="votes">{this.totalVotes()}</span>
-            <img src={this.state.data.avatar_url} alt="" className="avatar" />
+            {/* <img src={this.state.data.avatar_url} alt="" className="avatar" /> */}
             <span className="logo">Quick Poll</span>
           </div>
           <h2>{this.state.data.question}</h2>

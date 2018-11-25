@@ -2,8 +2,7 @@
     font-family: 'Quicksand', sans-serif;
     background: white;
     padding: 15px;
-    height: auto;
-    width: 300px;
+    /* max-width: 350px; */
     border-radius: 18px;
     overflow: hidden;
     margin: 0 auto 20px auto;
@@ -13,7 +12,7 @@
     text-align: center;
     color: #3c3d45;
     font-size: 1.25em;
-    margin: 40px 20px 40px 20px;
+    margin: 100px 20px 100px 20px;
   }
   img.avatar {
     width: 75px;
@@ -32,6 +31,7 @@
     padding-left: 20px;
     padding-right: 20px;
     cursor: pointer;
+    display: flex;
   }
   
   .progress.winner {
@@ -50,12 +50,13 @@
     color: #505776;
     font-size: 1em;
     font-weight: bold;
-    float: left;
+    justify-content: flex-start;
+    flex: 1;
     margin-top: 16px;
   }
   
   .progress .votes {
-    float: right;
+    justify-content: flex-end;
     color:grey;
     font-size: .85em;
     margin-top: 16px;
@@ -63,14 +64,16 @@
   
   .header {
     color: #dad9e1;
-    font-weight: bold
+    font-weight: bold;
+    display: flex;
   }
   
   .header .votes {
     font-weight: bold;
-    float: left
+    justify-self: flex-start;
+    flex: 1;
   }
   
   .header .logo {
-    float: right
+    justify-content: flex-end;
   }
