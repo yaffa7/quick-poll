@@ -6,15 +6,15 @@
             "question": "In what country was Trivial Persuit Created?",
             "options": [
                 {
-                    "value": 13,
+                    "value": 3,
                     "text": "Canada"
                 },
                 {
-                    "value": 56,
+                    "value": 10,
                     "text": "Japan"
                 },
                 {
-                    "value": 36,
+                    "value": 7,
                     "text": "USA"
                 }
             ]

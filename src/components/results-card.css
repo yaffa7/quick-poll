@@ -2,18 +2,26 @@
     font-family: 'Quicksand', sans-serif;
     background: white;
     padding: 15px;
-    /* max-width: 350px; */
     border-radius: 18px;
     overflow: hidden;
     margin: 0 auto 20px auto;
+    opacity: 0;
+    transition: opacity 800ms, transform 300ms;
+    transform: translateY(3em)
+  }
+
+  .card.show {
+    opacity: 100;
+    transform: translateY(0em)
   }
 
   .card h2 {
     text-align: center;
     color: #3c3d45;
-    font-size: 1.25em;
+    font-size: 2em;
     margin: 100px 20px 100px 20px;
   }
+  
   img.avatar {
     width: 75px;
     border-radius: 5em;
@@ -28,31 +36,41 @@
     color: white;
     margin-bottom: 5px;
     overflow: auto;
-    padding-left: 20px;
-    padding-right: 20px;
     cursor: pointer;
     display: flex;
   }
-  
+  .progress-bar {
+    background-color: #505776;
+    border-top-right-radius: 6em;
+    border-bottom-right-radius: 6em;
+    transition: width 300ms ease-in;
+  }
+
+  .progress-bar.winner {
+    background-color: #67d098;
+    transition: width 300ms ease-in;
+    border-top-right-radius: 6em;
+    border-bottom-right-radius: 6em;
+  }
+
   .progress.winner {
     border: 3px solid #efefef;
     border-radius: 6em;
     height: 50px;
-    background-color: #67d098;
     margin-bottom: 5px;
     overflow: auto;
-    padding-left: 20px;
-    padding-right: 20px;
     cursor: pointer;
   }
   
   .progress .answer {
-    color: #505776;
+    color: #636363;
     font-size: 1em;
     font-weight: bold;
     justify-content: flex-start;
     flex: 1;
     margin-top: 16px;
+    position: absolute;
+    left: 28px;
   }
   
   .progress .votes {
@@ -60,6 +78,8 @@
     color:grey;
     font-size: .85em;
     margin-top: 16px;
+    position: absolute;
+    right: 28px;
   }
   
   .header {
@@ -76,4 +96,9 @@
   
   .header .logo {
     justify-content: flex-end;
+  }
+
+  .level {
+    /* position: absolute; */
+    z-index: 1;
   }
