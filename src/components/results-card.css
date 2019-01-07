@@ -72,6 +72,11 @@
     position: absolute;
     left: 28px;
   }
+
+  /* Prevent text from being highlighted */
+  .progress .answer::selection, .progress .votes::selection {
+    background: transparent;
+  }
   
   .progress .votes {
     justify-content: flex-end;
